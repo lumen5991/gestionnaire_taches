@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Verdana', sans-serif;
+    box-sizing: border-box;
+}
+body{
+  /*   background: linear-gradient(130deg, #1c3734, #082639);
+    overflow-x: hidden; */
+    background-color: #c4c7ca;
+}
+
+#date{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container, .block{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    margin-top: -30px;
+}
+
+.todo-app{
+    max-width: 900px;
+}
+.todo-app, .block_box{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: relative;
+}
+.todo-app::before,
+.todo-app::after,
+.block_box::before,
+.block_box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(45deg,
+     #3f4e97,#ffe467, #243aa7, #0000ff,
+      #0000ff,#ffe467, #272727, #082639,
+      #3f4e97,#ffe467, #243aa7, #0000ff,
+      #0000ff,#ffe467, #272727, #082639); 
+    width: 100%;
+    height: 100%;
+    background-size: 500%;
+    z-index: -1;
+    transform: scale(1.02);
+    animation: animate 40s infinite;
+}
+
+.box::after{
+    filter: blur(20px);
+}
+@keyframes animate{
+    0%{ background-position: 0 0;}
+    50% { background-position: 300% 0;}
+    100% { background-position: 0;}
+
+}
+
+.todo-app h2, .block_box h2 {
+    color: #199EB4;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    animation: rainbow 10s infinite;
+    font-size: 30px;
+    margin-top: -2rem;
+}
+  
+  @keyframes rainbow {
+    0% { color: #272727; }
+    25% { color: #ffe467; }
+    50% { color: #243aa7; }
+    75% { color: #272727; }
+    100% { color: #ffe467; }
+  }
+
+.todo-app h2 img{
+    width: 10%;
+    margin: 4px 0 0 10px;
+}
+.logo{
+    width: 8rem;
+    margin: 0 auto;
+    margin-top: -2rem;
+}
+.logo a img {
+    width: 100%;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #189F94;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+} 
+
+.to_connect{
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+}
+.to_connect a{
+    text-decoration: none;
+   /*  color: #fff; */
+    color: #000;
+    /* background: #082639; */
+  /*   padding: 5px 10px; */
+    }
+.to_connect a:hover, #submit_connect:hover, .button_signup button:hover{
+    color:brown;
+    font-weight: bolder;
+    border-bottom: 2px solid #000;
+}
+/*inscription*/
+.form_signup{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.button_signup{
+    display:flex;
+    justify-content: space-between;
+}
+.button_signup button {
+    height: 2rem;
+    border: none;
+    outline:none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.row input{
+    border: none;
+    outline: none;
+    background-color: none;
+    padding: 10px;
+    font-weight: bolder;
+    color: #000;
+    width: 375px;
+} 
+
+.formulaire input, .form_connect input{
+    border: none;
+ /*    border-bottom: 1px solid #082639; */
+    outline: none;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 16px;
+    color: #082639;
+}
+
+#Date{
+    font-size: 16px;
+    color: #000;
+} */
+.row input::placeholder{
+    color:#000;
+} 
+
+.formulaire ::placeholder, .form_connect::placeholder{
+    color: #000;
+    font-size: 16px;
+
+}
+
+.task-responsable, .task-description{
+    border: 2px solid red;
+    color: black;
+    border-radius: 10px;
+    margin: 10px;
+}
+.task-responsable::placeholder, .task-description::placeholder{
+    color: #000;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: #009CDD;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+   /*  border-radius: 40px; */
+    width: 60px;
+}
+.row button:hover{
+    background-color: hsl(348, 74%, 36%);
+} */
+
+.formulaire button, .form_connect button{
+    outline: none;
+    border: none;
+    background: none;
+    margin: 0 40px 0 0px;
+    font-size: 16px;
+}
+
+.task-date{
+    color: red;
+    width: 200px;
+    text-align: center;
+    margin-top: -20px;
+    font-size: 14px;
+}
+
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 15px 10px 15px 50px;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-image: url(../images/8685579_ic_fluent_checkbox_unchecked_filled_icon.png);
+    background-size: 25px;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration:line-through;
+}
+ul li.checked::before{
+    background-image: url(../images/check_check\ square_checked_marked_selected_icon.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background:hsl(348, 74%, 36%);
+
+}
